@@ -1,5 +1,7 @@
 {
   "item.tutorial-mod.ice_ether": "Ice Ether",
   "item.tutorial-mod.raw_ice_ether": "Raw Ice Ether",
-  "item.tutorial-mod.material.cardboard": "Cardboard"
+  "item.tutorial-mod.material.cardboard": "Cardboard",
+  "itemGroup.tutorial_group": "Tutorial Group",
+  "itemGroup.tutorial_group2": "Tutorial Group 2"
 }
