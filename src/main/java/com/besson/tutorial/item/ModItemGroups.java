@@ -1,6 +1,7 @@
 package com.besson.tutorial.item;
 
 import com.besson.tutorial.TutorialMod;
+import com.besson.tutorial.block.ModBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -29,6 +30,9 @@ public class ModItemGroups {
                         entries.add(ModItems.CARDBOARD);
                         entries.add(Items.DIAMOND);
                         entries.add(Blocks.STONE);
+                        entries.add(ModBlocks.ICE_ETHER_BLOCK);
+                        entries.add(ModBlocks.RAW_ICE_ETHER_BLOCK);
+                        entries.add(ModBlocks.ICE_ETHER_ORE);
                     }).build());
 
     public static void registerGroups() {
