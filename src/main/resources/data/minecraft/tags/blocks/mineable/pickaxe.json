@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "tutorial-mod:ice_ether_block",
+    "tutorial-mod:ice_ether_ore"
+  ]
+}
