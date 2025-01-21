@@ -1,7 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "building",
-  "group": "ice_ether",
+  "category": "misc",
   "ingredients": [
     {
       "item": "tutorial-mod:ice_ether_block"
