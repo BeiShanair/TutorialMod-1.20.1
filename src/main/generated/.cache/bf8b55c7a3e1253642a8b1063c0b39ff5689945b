@@ -1,10 +1,13 @@
-// 1.20.1	2025-01-21T10:09:07.8784295	Tutorial Mod/Model Definitions
+// 1.20.1	2025-01-24T10:17:01.5895395	Tutorial Mod/Model Definitions
 6b683948507b875aa5c84d62d0590647203833f7 assets\tutorial-mod\models\block\ice_ether_ore.json
 594b8e34e448b4964beebfeae2b02cfce112c406 assets\tutorial-mod\models\item\raw_ice_ether.json
 73b2ac269d4a97b48cd4c10abaa1f0ba4beb2753 assets\tutorial-mod\blockstates\ice_ether_block.json
 abfc1ae2daf3a295b82697643f6e990559c9302d assets\tutorial-mod\blockstates\raw_ice_ether_block.json
+4cc12f06e414dabad8b2b8e56a105f13f6de62ea assets\tutorial-mod\models\item\corn.json
 171330d350ca4b277e67f75cb8488a295cf0ef50 assets\tutorial-mod\models\block\raw_ice_ether_block.json
 61dc6d16cbc72351e8d483d90bfc41ecd18ffc2d assets\tutorial-mod\models\item\raw_ice_ether_block.json
+9fcf77a7723ab41b782db4957f28bcbf99dc48dc assets\tutorial-mod\models\item\cheese.json
+80125078958a222c91912406d96617236c84e537 assets\tutorial-mod\models\item\strawberry.json
 f9fb1562ace456eef64f6f2091cf6a12232d642c assets\tutorial-mod\models\block\ice_ether_block.json
 547ce9769b0011b7e063d5356a88fc405a7f3cf3 assets\tutorial-mod\models\item\ice_ether.json
 5ef8b728cd3c3bca75b149a651d1c568df5d13b2 assets\tutorial-mod\blockstates\ice_ether_ore.json

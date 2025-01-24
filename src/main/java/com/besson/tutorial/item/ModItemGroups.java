@@ -33,6 +33,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ICE_ETHER_BLOCK);
                         entries.add(ModBlocks.RAW_ICE_ETHER_BLOCK);
                         entries.add(ModBlocks.ICE_ETHER_ORE);
+                        entries.add(ModItems.CORN);
+                        entries.add(ModItems.STRAWBERRY);
+                        entries.add(ModItems.CHEESE);
                     }).build());
 
     public static void registerGroups() {
