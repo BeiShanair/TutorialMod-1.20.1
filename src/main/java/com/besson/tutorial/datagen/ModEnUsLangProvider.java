@@ -19,6 +19,7 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.CORN, "Corn");
         translationBuilder.add(ModItems.STRAWBERRY, "Strawberry");
         translationBuilder.add(ModItems.CHEESE, "Cheese");
+        translationBuilder.add(ModItems.ANTHRACITE, "Anthracite");
 
         translationBuilder.add(ModBlocks.ICE_ETHER_BLOCK, "Ice Ether Block");
         translationBuilder.add(ModBlocks.RAW_ICE_ETHER_BLOCK, "Raw Ice Ether Block");
