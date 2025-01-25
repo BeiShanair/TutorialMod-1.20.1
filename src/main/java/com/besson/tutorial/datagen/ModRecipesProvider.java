@@ -3,6 +3,7 @@ package com.besson.tutorial.datagen;
 import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.item.ModItems;
+import com.besson.tutorial.tag.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
@@ -41,8 +42,8 @@ public class ModRecipesProvider extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, Items.SUGAR, 3)
                 .pattern("###")
-                .input('#', Items.BEETROOT)
-                .criterion(hasItem(Items.BEETROOT), conditionsFromItem(Items.BEETROOT))
+                .input('#', ModItemTags.SUGAR_INGREDIENTS)
+                .criterion(hasItem(Items.BEETROOT), conditionsFromTag(ModItemTags.SUGAR_INGREDIENTS))
                 .offerTo(exporter, new Identifier(TutorialMod.MOD_ID, "sugar_from_beetroot"));
 
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING,

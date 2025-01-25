@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:beetroot"
-            ]
+            "tag": "tutorial-mod:sugar_ingredients"
           }
         ]
       },

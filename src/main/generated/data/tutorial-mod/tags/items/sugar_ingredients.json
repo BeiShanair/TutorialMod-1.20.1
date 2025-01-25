@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "tutorial-mod:cheese",
+    "tutorial-mod:strawberry",
+    "minecraft:beetroot"
+  ]
+}
