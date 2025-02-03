@@ -1,6 +1,6 @@
-// 1.20.1	2025-01-25T15:33:55.2070085	Tutorial Mod/Recipes
-b04dfe497996198264265781310e6c79fb991c9b data\tutorial-mod\advancements\recipes\building_blocks\ice_ether_block.json
+// 1.20.1	2025-02-03T11:15:33.5142323	Tutorial Mod/Recipes
 2ee4dccb762fb7b2c0ae803f9adfe718285acc5a data\tutorial-mod\advancements\recipes\building_blocks\raw_ice_ether_block.json
+b04dfe497996198264265781310e6c79fb991c9b data\tutorial-mod\advancements\recipes\building_blocks\ice_ether_block.json
 b4fbee60155146f377e940c4bb67e45da63de2b9 data\tutorial-mod\advancements\recipes\misc\ice_ether.json
 23cf73114ab2e2423c2dfedd70701eddcda39c9e data\tutorial-mod\advancements\recipes\misc\ice_ether_ore.json
 cdddb437cccc2942632b76bb6b04f029790ce292 data\tutorial-mod\recipes\ice_ether_from_campfire_cooking.json

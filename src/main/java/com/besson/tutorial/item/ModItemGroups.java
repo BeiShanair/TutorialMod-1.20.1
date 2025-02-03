@@ -37,6 +37,15 @@ public class ModItemGroups {
                         entries.add(ModItems.STRAWBERRY);
                         entries.add(ModItems.CHEESE);
                         entries.add(ModItems.ANTHRACITE);
+                        entries.add(ModBlocks.ICE_ETHER_STAIRS);
+                        entries.add(ModBlocks.ICE_ETHER_SLAB);
+                        entries.add(ModBlocks.ICE_ETHER_BUTTON);
+                        entries.add(ModBlocks.ICE_ETHER_PRESSURE_PLATE);
+                        entries.add(ModBlocks.ICE_ETHER_FENCE);
+                        entries.add(ModBlocks.ICE_ETHER_FENCE_GATE);
+                        entries.add(ModBlocks.ICE_ETHER_WALL);
+                        entries.add(ModBlocks.ICE_ETHER_DOOR);
+                        entries.add(ModBlocks.ICE_ETHER_TRAPDOOR);
                     }).build());
 
     public static void registerGroups() {
