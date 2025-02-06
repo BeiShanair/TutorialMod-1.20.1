@@ -46,6 +46,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ICE_ETHER_WALL);
                         entries.add(ModBlocks.ICE_ETHER_DOOR);
                         entries.add(ModBlocks.ICE_ETHER_TRAPDOOR);
+                        entries.add(ModItems.FIRE_ETHER);
+                        entries.add(ModItems.FIRE_ETHER_SWORD);
+                        entries.add(ModItems.FIRE_ETHER_SHOVEL);
+                        entries.add(ModItems.FIRE_ETHER_PICKAXE);
+                        entries.add(ModItems.FIRE_ETHER_AXE);
+                        entries.add(ModItems.FIRE_ETHER_HOE);
                     }).build());
 
     public static void registerGroups() {
