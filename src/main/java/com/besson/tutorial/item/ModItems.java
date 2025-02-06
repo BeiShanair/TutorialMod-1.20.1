@@ -1,6 +1,7 @@
 package com.besson.tutorial.item;
 
 import com.besson.tutorial.TutorialMod;
+import com.besson.tutorial.item.custom.PickaxeAxeItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -33,6 +34,9 @@ public class ModItems {
             6.0f, -3.2F, new Item.Settings()));
     public static final Item FIRE_ETHER_HOE = registerItems("fire_ether_hoe", new HoeItem(ModToolMaterials.FIRE_ETHER,
             -4, 0.0F, new Item.Settings()));
+
+    public static final Item PICKAXE_AXE = registerItems("pickaxe_axe", new PickaxeAxeItem(
+            ModToolMaterials.FIRE_ETHER, 6.0F, -2.8F, new Item.Settings().fireproof()));
 
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), new Identifier(TutorialMod.MOD_ID, id)), item);

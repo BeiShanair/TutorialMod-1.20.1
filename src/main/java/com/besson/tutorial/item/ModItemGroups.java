@@ -52,6 +52,7 @@ public class ModItemGroups {
                         entries.add(ModItems.FIRE_ETHER_PICKAXE);
                         entries.add(ModItems.FIRE_ETHER_AXE);
                         entries.add(ModItems.FIRE_ETHER_HOE);
+                        entries.add(ModItems.PICKAXE_AXE);
                     }).build());
 
     public static void registerGroups() {

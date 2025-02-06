@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-06T13:43:05.3049773	Tutorial Mod/Model Definitions
+// 1.20.1	2025-02-06T15:03:49.1628303	Tutorial Mod/Model Definitions
 cf978ca6f0acef0e55d48391999adf0617c2f298 assets\tutorial-mod\models\item\fire_ether_pickaxe.json
 73b2ac269d4a97b48cd4c10abaa1f0ba4beb2753 assets\tutorial-mod\blockstates\ice_ether_block.json
 b90de9ee774f58337ac7f641361cf0d0155c0954 assets\tutorial-mod\blockstates\ice_ether_wall.json
@@ -52,8 +52,8 @@ bd6917e7b89e735927b65975ae5f0f23d9e4936e assets\tutorial-mod\models\block\ice_et
 54b7f2a5f6411585a8d4855b8adfcff48fb6f9d0 assets\tutorial-mod\models\item\ice_ether_stairs.json
 d39b98841f707c629c832a14c5fad8a19d83865d assets\tutorial-mod\models\block\ice_ether_wall_inventory.json
 bcf86f5ae81b2e5ad767f7195e2ea0a2c8fedc0f assets\tutorial-mod\models\block\ice_ether_button_pressed.json
-7e45d299163833e5930a4680f3b3bb9c66174e71 assets\tutorial-mod\blockstates\ice_ether_fence.json
 2ad69ac023bc8214008df1048f61db3e5caee933 assets\tutorial-mod\blockstates\ice_ether_trapdoor.json
+7e45d299163833e5930a4680f3b3bb9c66174e71 assets\tutorial-mod\blockstates\ice_ether_fence.json
 ddb15d7a0679cd621d5b58414a41f1f33b132c3a assets\tutorial-mod\models\item\anthracite.json
 75ee378f4ee83fb560df1e63cbd161def7bc171a assets\tutorial-mod\models\block\ice_ether_fence_gate_wall.json
 02a138ed485c0501066ebfb517d805a13731818b assets\tutorial-mod\blockstates\ice_ether_fence_gate.json
@@ -61,6 +61,7 @@ abfc1ae2daf3a295b82697643f6e990559c9302d assets\tutorial-mod\blockstates\raw_ice
 477a947b16bd2769251eb0f1aee4cc8b4faa1019 assets\tutorial-mod\models\item\fire_ether_shovel.json
 b75310cd5036e1675b8d65393c5f197215460ac9 assets\tutorial-mod\blockstates\ice_ether_slab.json
 90a982fac4d37570e10c59c92b40388cc949e884 assets\tutorial-mod\models\block\ice_ether_door_top_left_open.json
+c5698c076a84258ee2f82ba16f50cf11ee1879ef assets\tutorial-mod\models\item\pickaxe_axe.json
 b1b8686c73f71c69c93d45e184dcb11258c1dab8 assets\tutorial-mod\models\block\ice_ether_trapdoor_top.json
 171330d350ca4b277e67f75cb8488a295cf0ef50 assets\tutorial-mod\models\block\raw_ice_ether_block.json
 386947fdb5d5c3a5e10bd6c82c241f7b60b8ad1f assets\tutorial-mod\models\block\ice_ether_button_inventory.json
