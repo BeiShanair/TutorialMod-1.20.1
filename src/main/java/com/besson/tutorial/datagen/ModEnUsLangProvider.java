@@ -46,5 +46,8 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
         translationBuilder.add("itemGroup.tutorial_group2", "Tutorial Group2");
+
+        translationBuilder.add("tooltip.tutorial.pickaxe_axe.shift", "This is a item that can be used as a pickaxe and an axe");
+        translationBuilder.add("tooltip.tutorial.pickaxe_axe", "Hold §6§n§l§oSHIFT§r§r§r§r for more info!");
     }
 }
