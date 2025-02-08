@@ -1,6 +1,7 @@
 package com.besson.tutorial.item;
 
 import com.besson.tutorial.TutorialMod;
+import com.besson.tutorial.item.custom.ModArmorItem;
 import com.besson.tutorial.item.custom.PickaxeAxeItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -39,7 +40,7 @@ public class ModItems {
             ModToolMaterials.FIRE_ETHER, 6.0F, -2.8F, new Item.Settings().fireproof()));
 
     public static final Item ICE_ETHER_HELMET = registerItems("ice_ether_helmet",
-            new ArmorItem(ModArmorMaterials.ICE_ETHER, ArmorItem.Type.HELMET, new Item.Settings()));
+            new ModArmorItem(ModArmorMaterials.ICE_ETHER, ArmorItem.Type.HELMET, new Item.Settings()));
     public static final Item ICE_ETHER_CHESTPLATE = registerItems("ice_ether_chestplate",
             new ArmorItem(ModArmorMaterials.ICE_ETHER, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static final Item ICE_ETHER_LEGGINGS = registerItems("ice_ether_leggings",
