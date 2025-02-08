@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tutorial-mod:ice_ether_helmet",
+    "tutorial-mod:ice_ether_chestplate",
+    "tutorial-mod:ice_ether_leggings",
+    "tutorial-mod:ice_ether_boots"
+  ]
+}

@@ -38,6 +38,15 @@ public class ModItems {
     public static final Item PICKAXE_AXE = registerItems("pickaxe_axe", new PickaxeAxeItem(
             ModToolMaterials.FIRE_ETHER, 6.0F, -2.8F, new Item.Settings().fireproof()));
 
+    public static final Item ICE_ETHER_HELMET = registerItems("ice_ether_helmet",
+            new ArmorItem(ModArmorMaterials.ICE_ETHER, ArmorItem.Type.HELMET, new Item.Settings()));
+    public static final Item ICE_ETHER_CHESTPLATE = registerItems("ice_ether_chestplate",
+            new ArmorItem(ModArmorMaterials.ICE_ETHER, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final Item ICE_ETHER_LEGGINGS = registerItems("ice_ether_leggings",
+            new ArmorItem(ModArmorMaterials.ICE_ETHER, ArmorItem.Type.LEGGINGS, new Item.Settings()));
+    public static final Item ICE_ETHER_BOOTS = registerItems("ice_ether_boots",
+            new ArmorItem(ModArmorMaterials.ICE_ETHER, ArmorItem.Type.BOOTS, new Item.Settings()));
+
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), new Identifier(TutorialMod.MOD_ID, id)), item);
     }
