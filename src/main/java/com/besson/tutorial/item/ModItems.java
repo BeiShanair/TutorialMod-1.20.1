@@ -48,6 +48,9 @@ public class ModItems {
     public static final Item ICE_ETHER_BOOTS = registerItems("ice_ether_boots",
             new ArmorItem(ModArmorMaterials.ICE_ETHER, ArmorItem.Type.BOOTS, new Item.Settings()));
 
+    public static final Item ICE_ETHER_HORSE_ARMOR = registerItems("ice_ether_horse_armor",
+            new HorseArmorItem(11 , "ice_ether", new Item.Settings().maxCount(1)));
+
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), new Identifier(TutorialMod.MOD_ID, id)), item);
     }

@@ -50,5 +50,7 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) ModItems.ICE_ETHER_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.ICE_ETHER_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.ICE_ETHER_BOOTS);
+
+        itemModelGenerator.register(ModItems.ICE_ETHER_HORSE_ARMOR, Models.GENERATED);
     }
 }
