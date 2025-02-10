@@ -1,6 +1,7 @@
 package com.besson.tutorial.item;
 
 import com.besson.tutorial.TutorialMod;
+import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.item.custom.ModArmorItem;
 import com.besson.tutorial.item.custom.PickaxeAxeItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -50,6 +51,9 @@ public class ModItems {
 
     public static final Item ICE_ETHER_HORSE_ARMOR = registerItems("ice_ether_horse_armor",
             new HorseArmorItem(11 , "ice_ether", new Item.Settings().maxCount(1)));
+
+    public static final Item STRAWBERRY_SEEDS = registerItems("strawberry_seeds",
+            new AliasedBlockItem(ModBlocks.STRAWBERRY_CROP, new Item.Settings()));
 
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), new Identifier(TutorialMod.MOD_ID, id)), item);

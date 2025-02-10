@@ -2,6 +2,7 @@ package com.besson.tutorial.datagen;
 
 import com.besson.tutorial.block.ModBlockFamilies;
 import com.besson.tutorial.block.ModBlocks;
+import com.besson.tutorial.block.custom.StrawberryCropBlock;
 import com.besson.tutorial.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -26,6 +27,8 @@ public class ModModelsProvider extends FabricModelProvider {
 //        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ICE_ETHER_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_ICE_ETHER_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ICE_ETHER_ORE);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3, 4, 5);
     }
 
     @Override

@@ -1,7 +1,9 @@
 package com.besson.tutorial.block;
 
 import com.besson.tutorial.TutorialMod;
+import com.besson.tutorial.block.custom.StrawberryCropBlock;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -32,6 +34,9 @@ public class ModBlocks {
             new DoorBlock(AbstractBlock.Settings.copy(ICE_ETHER_BLOCK), BlockSetType.IRON));
     public static final Block ICE_ETHER_TRAPDOOR = register("ice_ether_trapdoor",
             new TrapdoorBlock(AbstractBlock.Settings.copy(ICE_ETHER_BLOCK).nonOpaque(), BlockSetType.STONE));
+
+    public static final Block STRAWBERRY_CROP = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "strawberry_crop"),
+            new StrawberryCropBlock(AbstractBlock.Settings.create().noCollision().ticksRandomly().breakInstantly().pistonBehavior(PistonBehavior.DESTROY)));
 
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);
