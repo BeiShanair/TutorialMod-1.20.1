@@ -1,6 +1,7 @@
 package com.besson.tutorial.block;
 
 import com.besson.tutorial.TutorialMod;
+import com.besson.tutorial.block.custom.CornCropBlock;
 import com.besson.tutorial.block.custom.StrawberryCropBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -37,6 +38,9 @@ public class ModBlocks {
 
     public static final Block STRAWBERRY_CROP = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "strawberry_crop"),
             new StrawberryCropBlock(AbstractBlock.Settings.create().noCollision().ticksRandomly().breakInstantly().pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block CORN_CROP = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "corn_crop"),
+            new CornCropBlock(AbstractBlock.Settings.create().noCollision().ticksRandomly().breakInstantly().pistonBehavior(PistonBehavior.DESTROY)));
 
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);
