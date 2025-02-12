@@ -16,6 +16,6 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelsProvider::new);
 		pack.addProvider(ModRecipesProvider::new);
 		pack.addProvider(ModZhCnLangProvider::new);
-
+		pack.addProvider(ModPointTagProvider::new);
 	}
 }

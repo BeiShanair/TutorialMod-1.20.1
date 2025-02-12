@@ -1,5 +1,6 @@
 package com.besson.tutorial.villager;
 
+import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.item.ModItems;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
@@ -33,6 +34,15 @@ public class ModTrades {
                     EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(Enchantments.SHARPNESS, 2)),
                     3, 12, 0.5F
             ));
+        });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.ICE_ETHER_MASTER, 1, factories -> {
+            factories.add(new TradeOffers.BuyForOneEmeraldFactory(ModItems.ICE_ETHER, 2, 12, 5));
+            factories.add(new TradeOffers.SellItemFactory(ModItems.FIRE_ETHER_AXE.getDefaultStack(), 1, 1, 5, 2, 0.5f));
+        });
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.ICE_ETHER_MASTER, 2, factories -> {
+            factories.add(new TradeOffers.BuyForOneEmeraldFactory(ModItems.FIRE_ETHER, 2, 12, 5));
+            factories.add(new TradeOffers.SellItemFactory(ModBlocks.ICE_ETHER_BLOCK.asItem().getDefaultStack(), 1, 12, 5, 2, 0.5f));
         });
     }
 }

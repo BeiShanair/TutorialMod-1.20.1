@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "tutorial-mod:ice_ether_poi",
+      "required": false
+    }
+  ]
+}

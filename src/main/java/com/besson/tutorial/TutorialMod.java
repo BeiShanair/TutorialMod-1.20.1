@@ -4,6 +4,7 @@ import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.item.ModItemGroups;
 import com.besson.tutorial.item.ModItems;
 import com.besson.tutorial.villager.ModTrades;
+import com.besson.tutorial.villager.ModVillagers;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -29,6 +30,7 @@ public class TutorialMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModTrades.registerTrades();
+		ModVillagers.registerModVillagers();
 
 //		FuelRegistry.INSTANCE.add(ModItems.ANTHRACITE, 1600);
 		LOGGER.info("Hello Fabric world!");
