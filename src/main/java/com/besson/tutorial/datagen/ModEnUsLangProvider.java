@@ -70,6 +70,9 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModItems.A_MOMENT_APART_MUSIC_DISC, "A Moment Apart Music Disc");
         translationBuilder.add(ModItems.A_MOMENT_APART_MUSIC_DISC.getTranslationKey() + ".desc", "A Moment Apart");
+
+        translationBuilder.add(ModItems.BASEBALL_BAT, "Baseball Bat");
+        translationBuilder.add(ModBlocks.ORANGE_NIGHTSTAND, "Orange Nightstand");
     }
 
 }

@@ -59,6 +59,8 @@ public class ModItems {
     public static final Item A_MOMENT_APART_MUSIC_DISC = registerItems("a_moment_apart_music_disc",
             new MusicDiscItem(15, ModSoundEvents.A_MOMENT_APART_MUSIC_DISC, new Item.Settings().maxCount(1), 234));
 
+    public static final Item BASEBALL_BAT = registerItems("baseball_bat", new Item(new Item.Settings()));
+
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), new Identifier(TutorialMod.MOD_ID, id)), item);
     }

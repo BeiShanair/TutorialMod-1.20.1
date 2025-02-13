@@ -43,6 +43,9 @@ public class ModBlocks {
     public static final Block CORN_CROP = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "corn_crop"),
             new CornCropBlock(AbstractBlock.Settings.create().noCollision().ticksRandomly().breakInstantly().pistonBehavior(PistonBehavior.DESTROY)));
 
+    public static final Block ORANGE_NIGHTSTAND = register("orange_nightstand",
+            new Block(AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
+
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);
         return Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, id), block);
