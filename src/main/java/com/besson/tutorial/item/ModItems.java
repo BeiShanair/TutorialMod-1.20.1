@@ -4,6 +4,7 @@ import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.item.custom.ModArmorItem;
 import com.besson.tutorial.item.custom.PickaxeAxeItem;
+import com.besson.tutorial.sound.ModSoundEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -54,6 +55,9 @@ public class ModItems {
 
     public static final Item STRAWBERRY_SEEDS = registerItems("strawberry_seeds",
             new AliasedBlockItem(ModBlocks.STRAWBERRY_CROP, new Item.Settings()));
+
+    public static final Item A_MOMENT_APART_MUSIC_DISC = registerItems("a_moment_apart_music_disc",
+            new MusicDiscItem(15, ModSoundEvents.A_MOMENT_APART_MUSIC_DISC, new Item.Settings().maxCount(1), 234));
 
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), new Identifier(TutorialMod.MOD_ID, id)), item);

@@ -34,5 +34,13 @@
     "sounds":[
       "tutorial-mod:block_step"
     ]
+  },
+  "a_moment_apart_music_disc": {
+    "sounds": [
+      {
+        "name": "tutorial-mod:a_moment_apart",
+        "stream": true
+      }
+    ]
   }
 }

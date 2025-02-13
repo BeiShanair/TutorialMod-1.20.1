@@ -12,6 +12,8 @@
   "block.tutorial-mod.ice_ether_wall": "Ice Ether Wall",
   "block.tutorial-mod.raw_ice_ether_block": "Raw Ice Ether Block",
   "entity.minecraft.villager.ice_ether_master": "Ice Ether Master",
+  "item.tutorial-mod.a_moment_apart_music_disc": "A Moment Apart Music Disc",
+  "item.tutorial-mod.a_moment_apart_music_disc.desc": "A Moment Apart",
   "item.tutorial-mod.anthracite": "Anthracite",
   "item.tutorial-mod.cheese": "Cheese",
   "item.tutorial-mod.corn": "Corn",

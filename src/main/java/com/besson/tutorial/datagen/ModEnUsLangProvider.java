@@ -67,6 +67,9 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add("sounds.tutorial-mod.block_step", "Block Step");
         translationBuilder.add("sounds.tutorial-mod.block_hit", "Block Hit");
         translationBuilder.add("sounds.tutorial-mod.block_fall", "Block Fall");
+
+        translationBuilder.add(ModItems.A_MOMENT_APART_MUSIC_DISC, "A Moment Apart Music Disc");
+        translationBuilder.add(ModItems.A_MOMENT_APART_MUSIC_DISC.getTranslationKey() + ".desc", "A Moment Apart");
     }
 
 }

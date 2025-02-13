@@ -24,5 +24,8 @@ public class ModItemTagsProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.ICE_ETHER_HELMET, ModItems.ICE_ETHER_CHESTPLATE, ModItems.ICE_ETHER_LEGGINGS, ModItems.ICE_ETHER_BOOTS);
+
+        getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
+                .add(ModItems.A_MOMENT_APART_MUSIC_DISC);
     }
 }

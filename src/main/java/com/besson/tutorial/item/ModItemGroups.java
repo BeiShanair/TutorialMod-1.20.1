@@ -59,6 +59,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ICE_ETHER_BOOTS);
                         entries.add(ModItems.ICE_ETHER_HORSE_ARMOR);
                         entries.add(ModItems.STRAWBERRY_SEEDS);
+                        entries.add(ModItems.A_MOMENT_APART_MUSIC_DISC);
                     }).build());
 
     public static void registerGroups() {
