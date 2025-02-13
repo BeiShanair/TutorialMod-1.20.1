@@ -62,6 +62,7 @@ public class ModItemGroups {
                         entries.add(ModItems.A_MOMENT_APART_MUSIC_DISC);
                         entries.add(ModItems.BASEBALL_BAT);
                         entries.add(ModBlocks.ORANGE_NIGHTSTAND);
+                        entries.add(ModBlocks.SIMPLE_ORANGE_CLOCK);
                     }).build());
 
     public static void registerGroups() {

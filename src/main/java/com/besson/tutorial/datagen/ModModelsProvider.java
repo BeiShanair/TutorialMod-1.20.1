@@ -43,6 +43,8 @@ public class ModModelsProvider extends FabricModelProvider {
                 );
 
         blockStateModelGenerator.registerSimpleState(ModBlocks.ORANGE_NIGHTSTAND);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.SIMPLE_ORANGE_CLOCK);
     }
 
     @Override
