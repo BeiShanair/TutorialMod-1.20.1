@@ -34,6 +34,12 @@
   "item.tutorial-mod.strawberry_seeds": "Strawberry Seeds",
   "itemGroup.tutorial_group": "Tutorial Group",
   "itemGroup.tutorial_group2": "Tutorial Group2",
+  "sounds.tutorial-mod.block_break": "Block Break",
+  "sounds.tutorial-mod.block_fall": "Block Fall",
+  "sounds.tutorial-mod.block_hit": "Block Hit",
+  "sounds.tutorial-mod.block_place": "Block Place",
+  "sounds.tutorial-mod.block_step": "Block Step",
+  "sounds.tutorial-mod.test": "Test",
   "tooltip.tutorial.pickaxe_axe": "Hold §6§n§l§oSHIFT§r§r§r§r for more info!",
   "tooltip.tutorial.pickaxe_axe.shift": "This is a item that can be used as a pickaxe and an axe"
 }

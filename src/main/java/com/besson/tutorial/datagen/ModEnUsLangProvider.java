@@ -60,5 +60,13 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add("tooltip.tutorial.pickaxe_axe", "Hold §6§n§l§oSHIFT§r§r§r§r for more info!");
 
         translationBuilder.add("entity.minecraft.villager.ice_ether_master", "Ice Ether Master");
+
+        translationBuilder.add("sounds.tutorial-mod.test", "Test");
+        translationBuilder.add("sounds.tutorial-mod.block_break", "Block Break");
+        translationBuilder.add("sounds.tutorial-mod.block_place", "Block Place");
+        translationBuilder.add("sounds.tutorial-mod.block_step", "Block Step");
+        translationBuilder.add("sounds.tutorial-mod.block_hit", "Block Hit");
+        translationBuilder.add("sounds.tutorial-mod.block_fall", "Block Fall");
     }
+
 }
