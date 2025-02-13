@@ -63,6 +63,7 @@ public class ModItemGroups {
                         entries.add(ModItems.BASEBALL_BAT);
                         entries.add(ModBlocks.ORANGE_NIGHTSTAND);
                         entries.add(ModBlocks.SIMPLE_ORANGE_CLOCK);
+                        entries.add(ModBlocks.SOFA);
                     }).build());
 
     public static void registerGroups() {

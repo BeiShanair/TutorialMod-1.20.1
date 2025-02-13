@@ -1,17 +1,22 @@
 package com.besson.tutorial.datagen;
 
+import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.ModBlockFamilies;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.block.custom.CornCropBlock;
+import com.besson.tutorial.block.custom.SofaBlock;
 import com.besson.tutorial.block.custom.StrawberryCropBlock;
 import com.besson.tutorial.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
 import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
 public class ModModelsProvider extends FabricModelProvider {
     public ModModelsProvider(FabricDataOutput output) {
@@ -45,6 +50,55 @@ public class ModModelsProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleState(ModBlocks.ORANGE_NIGHTSTAND);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.SIMPLE_ORANGE_CLOCK);
+
+        Identifier left = new Identifier(TutorialMod.MOD_ID, "block/sofa_left");
+        Identifier right = new Identifier(TutorialMod.MOD_ID, "block/sofa_right");
+        Identifier middle = new Identifier(TutorialMod.MOD_ID, "block/sofa_middle");
+        Identifier single = new Identifier(TutorialMod.MOD_ID, "block/sofa");
+        blockStateModelGenerator.blockStateCollector
+                .accept(createSofaBlockState(ModBlocks.SOFA, left, right, middle, single));
+    }
+
+    public static BlockStateSupplier createSofaBlockState(Block block, Identifier left, Identifier right, Identifier middle, Identifier single) {
+        return VariantsBlockStateSupplier.create(block)
+                .coordinate(
+                        BlockStateVariantMap.create(SofaBlock.TYPE, Properties.HORIZONTAL_FACING)
+                                .register(SofaBlock.Type.LEFT, Direction.EAST,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, left).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                                .register(SofaBlock.Type.LEFT, Direction.SOUTH,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, left).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                                .register(SofaBlock.Type.LEFT, Direction.WEST,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, left).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                                .register(SofaBlock.Type.LEFT, Direction.NORTH,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, left))
+
+                                .register(SofaBlock.Type.RIGHT, Direction.EAST,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, right).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                                .register(SofaBlock.Type.RIGHT, Direction.SOUTH,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, right).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                                .register(SofaBlock.Type.RIGHT, Direction.WEST,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, right).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                                .register(SofaBlock.Type.RIGHT, Direction.NORTH,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, right))
+
+                                .register(SofaBlock.Type.MIDDLE, Direction.EAST,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, middle).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                                .register(SofaBlock.Type.MIDDLE, Direction.SOUTH,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, middle).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                                .register(SofaBlock.Type.MIDDLE, Direction.WEST,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, middle).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                                .register(SofaBlock.Type.MIDDLE, Direction.NORTH,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, middle))
+
+                                .register(SofaBlock.Type.SINGLE, Direction.EAST,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, single).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                                .register(SofaBlock.Type.SINGLE, Direction.SOUTH,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, single).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                                .register(SofaBlock.Type.SINGLE, Direction.WEST,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, single).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                                .register(SofaBlock.Type.SINGLE, Direction.NORTH,
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, single))
+                );
     }
 
     @Override

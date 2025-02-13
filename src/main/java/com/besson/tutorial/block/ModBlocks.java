@@ -3,6 +3,7 @@ package com.besson.tutorial.block;
 import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.custom.CornCropBlock;
 import com.besson.tutorial.block.custom.SimpleOrangeClock;
+import com.besson.tutorial.block.custom.SofaBlock;
 import com.besson.tutorial.block.custom.StrawberryCropBlock;
 import com.besson.tutorial.sound.ModSoundEvents;
 import net.minecraft.block.*;
@@ -48,6 +49,9 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
     public static final Block SIMPLE_ORANGE_CLOCK = register("simple_orange_clock",
             new SimpleOrangeClock(AbstractBlock.Settings.create().strength(2.0f, 6.0f)));
+
+    public static final Block SOFA = register("sofa",
+            new SofaBlock(AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
 
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);
