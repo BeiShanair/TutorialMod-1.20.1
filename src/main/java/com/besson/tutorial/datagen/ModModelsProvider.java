@@ -62,6 +62,29 @@ public class ModModelsProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.BED);
 
         blockStateModelGenerator.registerParentedItemModel(ModBlocks.PILLAR, ModelIds.getBlockModelId(ModBlocks.PILLAR));
+
+        Identifier post = new Identifier(TutorialMod.MOD_ID, "block/fence_post");
+        Identifier side = new Identifier(TutorialMod.MOD_ID, "block/fence_side");
+        blockStateModelGenerator.blockStateCollector
+                .accept(createFenceBlockState(ModBlocks.FENCE, post, side));
+    }
+
+    public static BlockStateSupplier createFenceBlockState(Block fenceBlock, Identifier postModelId, Identifier sideModelId) {
+        return MultipartBlockStateSupplier.create(fenceBlock)
+                .with(BlockStateVariant.create().put(VariantSettings.MODEL, postModelId))
+                .with(When.create().set(Properties.NORTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, sideModelId))
+                .with(
+                        When.create().set(Properties.EAST, true),
+                        BlockStateVariant.create().put(VariantSettings.MODEL, sideModelId).put(VariantSettings.Y, VariantSettings.Rotation.R90)
+                )
+                .with(
+                        When.create().set(Properties.SOUTH, true),
+                        BlockStateVariant.create().put(VariantSettings.MODEL, sideModelId).put(VariantSettings.Y, VariantSettings.Rotation.R180)
+                )
+                .with(
+                        When.create().set(Properties.WEST, true),
+                        BlockStateVariant.create().put(VariantSettings.MODEL, sideModelId).put(VariantSettings.Y, VariantSettings.Rotation.R270)
+                );
     }
 
     public static BlockStateSupplier createSofaBlockState(Block block, Identifier left, Identifier right, Identifier middle, Identifier single) {

@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-14T11:34:38.8514501	Tutorial Mod/Model Definitions
+// 1.20.1	2025-02-14T12:22:29.2076791	Tutorial Mod/Model Definitions
 8ac3ebb9d40662e621842524b8f2902143e4a6b2 assets\tutorial-mod\models\item\ice_ether_door.json
 14cf9db70fced8719bdf31a92a13cbc0c5a6ea9d assets\tutorial-mod\models\block\ice_ether_fence_side.json
 19c376927180ae90518123bcdd7b022b96f95e50 assets\tutorial-mod\models\item\ice_ether_boots_iron_trim.json
@@ -73,6 +73,7 @@ b1b8686c73f71c69c93d45e184dcb11258c1dab8 assets\tutorial-mod\models\block\ice_et
 69d21193197d619a20af14c07163f2d666d205a2 assets\tutorial-mod\models\item\ice_ether_leggings_copper_trim.json
 386947fdb5d5c3a5e10bd6c82c241f7b60b8ad1f assets\tutorial-mod\models\block\ice_ether_button_inventory.json
 cc05683e83cfcfffe07416aac3a10e340588bf23 assets\tutorial-mod\models\block\ice_ether_wall_post.json
+03979a10af24df0d1c351be3ee3b722a1758f6e0 assets\tutorial-mod\blockstates\fence.json
 a26c169cae66e1d597ef94537805447d5608d44b assets\tutorial-mod\models\block\ice_ether_door_top_right.json
 e374cac304e4ce5253bd970f414e2b5cdc57032f assets\tutorial-mod\models\item\ice_ether_chestplate_lapis_trim.json
 cf978ca6f0acef0e55d48391999adf0617c2f298 assets\tutorial-mod\models\item\fire_ether_pickaxe.json
@@ -127,9 +128,10 @@ d39b98841f707c629c832a14c5fad8a19d83865d assets\tutorial-mod\models\block\ice_et
 05a4fa521e412fcf222bf620423df0339961db25 assets\tutorial-mod\models\item\ice_ether_boots_lapis_trim.json
 c0082e6ceb0299236b792f2d02ee8cf4992429ad assets\tutorial-mod\models\item\ice_ether_leggings_redstone_trim.json
 bcf86f5ae81b2e5ad767f7195e2ea0a2c8fedc0f assets\tutorial-mod\models\block\ice_ether_button_pressed.json
-7e45d299163833e5930a4680f3b3bb9c66174e71 assets\tutorial-mod\blockstates\ice_ether_fence.json
 2ad69ac023bc8214008df1048f61db3e5caee933 assets\tutorial-mod\blockstates\ice_ether_trapdoor.json
+7e45d299163833e5930a4680f3b3bb9c66174e71 assets\tutorial-mod\blockstates\ice_ether_fence.json
 08ba9cb1fea893721643690668267adf8027c5de assets\tutorial-mod\models\item\ice_ether_helmet_amethyst_trim.json
+62f617fb0a067e057697c920f1866d757b358e8c assets\tutorial-mod\models\item\fence.json
 75ee378f4ee83fb560df1e63cbd161def7bc171a assets\tutorial-mod\models\block\ice_ether_fence_gate_wall.json
 02a138ed485c0501066ebfb517d805a13731818b assets\tutorial-mod\blockstates\ice_ether_fence_gate.json
 326008449ac53087eab4651de3ef21c8aa42882f assets\tutorial-mod\models\item\simple_orange_clock.json

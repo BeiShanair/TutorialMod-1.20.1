@@ -61,6 +61,9 @@ public class ModBlocks {
     public static final Block PILLAR = register("pillar",
             new PillarBlock(AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
 
+    public static final Block FENCE = register("fence",
+            new ModFenceBlock(AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
+
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);
         return Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, id), block);
