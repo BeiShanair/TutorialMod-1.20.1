@@ -57,6 +57,8 @@ public class ModModelsProvider extends FabricModelProvider {
         Identifier single = new Identifier(TutorialMod.MOD_ID, "block/sofa");
         blockStateModelGenerator.blockStateCollector
                 .accept(createSofaBlockState(ModBlocks.SOFA, left, right, middle, single));
+
+        blockStateModelGenerator.registerSimpleState(ModBlocks.LAMP_BLOCK);
     }
 
     public static BlockStateSupplier createSofaBlockState(Block block, Identifier left, Identifier right, Identifier middle, Identifier single) {
