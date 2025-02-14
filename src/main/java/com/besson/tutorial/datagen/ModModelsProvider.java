@@ -60,6 +60,8 @@ public class ModModelsProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleState(ModBlocks.LAMP_BLOCK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.BED);
+
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.PILLAR, ModelIds.getBlockModelId(ModBlocks.PILLAR));
     }
 
     public static BlockStateSupplier createSofaBlockState(Block block, Identifier left, Identifier right, Identifier middle, Identifier single) {

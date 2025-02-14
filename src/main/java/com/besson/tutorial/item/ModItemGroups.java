@@ -66,6 +66,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SOFA);
                         entries.add(ModBlocks.LAMP_BLOCK);
                         entries.add(ModBlocks.BED);
+                        entries.add(ModBlocks.PILLAR);
                     }).build());
 
     public static void registerGroups() {

@@ -2,6 +2,7 @@ package com.besson.tutorial.block;
 
 import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.custom.*;
+import com.besson.tutorial.block.custom.PillarBlock;
 import com.besson.tutorial.sound.ModSoundEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -56,6 +57,9 @@ public class ModBlocks {
 
     public static final Block BED = register("bed",
             new ModBedBlock(DyeColor.BLACK, AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
+
+    public static final Block PILLAR = register("pillar",
+            new PillarBlock(AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
 
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type2=single": {
+      "model": "tutorial-mod:block/pillar"
+    },
+    "type2=top": {
+      "model": "tutorial-mod:block/pillar_top"
+    },
+    "type2=bottom": {
+      "model": "tutorial-mod:block/pillar_bottom"
+    },
+    "type2=middle": {
+      "model": "tutorial-mod:block/pillar_middle"
+    }
+  }
+}
