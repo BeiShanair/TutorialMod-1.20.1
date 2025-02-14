@@ -57,6 +57,7 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.BED, "Bed");
         translationBuilder.add(ModBlocks.PILLAR, "Pillar");
         translationBuilder.add(ModBlocks.FENCE, "Fence");
+        translationBuilder.add(ModBlocks.SIMPLE_CABINET, "Simple Cabinet");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
         translationBuilder.add("itemGroup.tutorial_group2", "Tutorial Group2");
@@ -81,6 +82,7 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.SIMPLE_ORANGE_CLOCK, "Simple Orange Clock");
 
         translationBuilder.add(ModBlocks.SOFA, "Sofa");
+        translationBuilder.add("container.simple_cabinet", "Simple Cabinet");
     }
 
 }

@@ -63,6 +63,8 @@ public class ModBlocks {
 
     public static final Block FENCE = register("fence",
             new ModFenceBlock(AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
+    public static final Block SIMPLE_CABINET = register("simple_cabinet",
+            new SimpleCabinet(AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque(), () -> ModBlockEntities.SIMPLE_CABINET));
 
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);

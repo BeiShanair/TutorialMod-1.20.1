@@ -1,5 +1,6 @@
 package com.besson.tutorial;
 
+import com.besson.tutorial.block.ModBlockEntities;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.entity.ModEntities;
 import com.besson.tutorial.item.ModItemGroups;
@@ -37,6 +38,7 @@ public class TutorialMod implements ModInitializer {
 		ModSoundEvents.registerSounds();
 
 		ModEntities.registerEntities();
+		ModBlockEntities.registerBlockEntities();
 
 //		FuelRegistry.INSTANCE.add(ModItems.ANTHRACITE, 1600);
 		LOGGER.info("Hello Fabric world!");
