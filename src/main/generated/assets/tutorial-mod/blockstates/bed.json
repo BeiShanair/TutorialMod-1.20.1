@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tutorial-mod:block/bed",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tutorial-mod:block/bed"
+    },
+    "facing=south": {
+      "model": "tutorial-mod:block/bed",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tutorial-mod:block/bed",
+      "y": 270
+    }
+  }
+}
