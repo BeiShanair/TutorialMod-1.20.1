@@ -2,6 +2,7 @@ package com.besson.tutorial.item;
 
 import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.ModBlocks;
+import com.besson.tutorial.block.ModFluids;
 import com.besson.tutorial.item.custom.ModArmorItem;
 import com.besson.tutorial.item.custom.PickaxeAxeItem;
 import com.besson.tutorial.sound.ModSoundEvents;
@@ -60,6 +61,9 @@ public class ModItems {
             new MusicDiscItem(15, ModSoundEvents.A_MOMENT_APART_MUSIC_DISC, new Item.Settings().maxCount(1), 234));
 
     public static final Item BASEBALL_BAT = registerItems("baseball_bat", new Item(new Item.Settings()));
+
+    public static final Item OIL_BUCKET = registerItem("oil_bucket",
+            new BucketItem(ModFluids.OIL, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), new Identifier(TutorialMod.MOD_ID, id)), item);

@@ -83,6 +83,8 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.SOFA, "Sofa");
         translationBuilder.add("container.simple_cabinet", "Simple Cabinet");
+
+        translationBuilder.add(ModItems.OIL_BUCKET, "Oil Bucket");
     }
 
 }

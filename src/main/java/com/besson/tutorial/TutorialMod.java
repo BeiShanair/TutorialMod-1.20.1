@@ -2,6 +2,7 @@ package com.besson.tutorial;
 
 import com.besson.tutorial.block.ModBlockEntities;
 import com.besson.tutorial.block.ModBlocks;
+import com.besson.tutorial.block.ModFluids;
 import com.besson.tutorial.entity.ModEntities;
 import com.besson.tutorial.item.ModItemGroups;
 import com.besson.tutorial.item.ModItems;
@@ -39,6 +40,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModEntities.registerEntities();
 		ModBlockEntities.registerBlockEntities();
+
+		ModFluids.registerModFluids();
 
 //		FuelRegistry.INSTANCE.add(ModItems.ANTHRACITE, 1600);
 		LOGGER.info("Hello Fabric world!");
