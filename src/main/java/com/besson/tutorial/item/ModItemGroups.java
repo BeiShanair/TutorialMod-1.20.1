@@ -71,6 +71,13 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SIMPLE_CABINET);
 
                         entries.add(ModItems.OIL_BUCKET);
+
+                        entries.add(ModBlocks.ICE_ETHER_LOG);
+                        entries.add(ModBlocks.ICE_ETHER_WOOD);
+                        entries.add(ModBlocks.STRIPPED_ICE_ETHER_LOG);
+                        entries.add(ModBlocks.STRIPPED_ICE_ETHER_WOOD);
+                        entries.add(ModBlocks.ICE_ETHER_LEAVES);
+                        entries.add(ModBlocks.ICE_ETHER_PLANKS);
                     }).build());
 
     public static void registerGroups() {

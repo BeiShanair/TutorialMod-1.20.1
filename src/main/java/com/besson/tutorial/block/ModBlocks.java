@@ -2,7 +2,7 @@ package com.besson.tutorial.block;
 
 import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.custom.*;
-import com.besson.tutorial.block.custom.PillarBlock;
+import com.besson.tutorial.block.custom.ModPillarBlock;
 import com.besson.tutorial.sound.ModSoundEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -59,7 +59,7 @@ public class ModBlocks {
             new ModBedBlock(DyeColor.BLACK, AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
 
     public static final Block PILLAR = register("pillar",
-            new PillarBlock(AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
+            new ModPillarBlock(AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
 
     public static final Block FENCE = register("fence",
             new ModFenceBlock(AbstractBlock.Settings.create().strength(2.0f, 6.0f).nonOpaque()));
@@ -68,6 +68,19 @@ public class ModBlocks {
 
     public static final Block OIL = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "oil"),
             new FluidBlock(ModFluids.OIL, AbstractBlock.Settings.copy(Blocks.WATER)));
+
+    public static final Block ICE_ETHER_LOG = register("ice_ether_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block ICE_ETHER_WOOD = register("ice_ether_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block STRIPPED_ICE_ETHER_LOG = register("stripped_ice_ether_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block STRIPPED_ICE_ETHER_WOOD = register("stripped_ice_ether_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block ICE_ETHER_LEAVES = register("ice_ether_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+    public static final Block ICE_ETHER_PLANKS = register("ice_ether_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
 
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);

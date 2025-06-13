@@ -85,6 +85,13 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add("container.simple_cabinet", "Simple Cabinet");
 
         translationBuilder.add(ModItems.OIL_BUCKET, "Oil Bucket");
+
+        translationBuilder.add(ModBlocks.ICE_ETHER_LOG, "Ice Ether Log");
+        translationBuilder.add(ModBlocks.ICE_ETHER_WOOD, "Ice Ether Wood");
+        translationBuilder.add(ModBlocks.STRIPPED_ICE_ETHER_LOG, "Stripped Ice Ether Log");
+        translationBuilder.add(ModBlocks.STRIPPED_ICE_ETHER_WOOD, "Stripped Ice Ether Wood");
+        translationBuilder.add(ModBlocks.ICE_ETHER_PLANKS, "Ice Ether Planks");
+        translationBuilder.add(ModBlocks.ICE_ETHER_LEAVES, "Ice Ether Leaves");
     }
 
 }

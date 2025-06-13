@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tutorial-mod:block/ice_ether_log",
+    "side": "tutorial-mod:block/ice_ether_log"
+  }
+}
