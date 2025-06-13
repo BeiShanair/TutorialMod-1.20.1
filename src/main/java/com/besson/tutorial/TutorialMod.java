@@ -3,6 +3,7 @@ package com.besson.tutorial;
 import com.besson.tutorial.block.ModBlockEntities;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.block.ModFluids;
+import com.besson.tutorial.entity.ModBoats;
 import com.besson.tutorial.entity.ModEntities;
 import com.besson.tutorial.item.ModItemGroups;
 import com.besson.tutorial.item.ModItems;
@@ -44,6 +45,8 @@ public class TutorialMod implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 
 		ModFluids.registerModFluids();
+
+		ModBoats.registerBoats();
 
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_LOG, ModBlocks.STRIPPED_ICE_ETHER_LOG);
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_WOOD, ModBlocks.STRIPPED_ICE_ETHER_WOOD);

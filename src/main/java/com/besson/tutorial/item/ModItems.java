@@ -3,9 +3,11 @@ package com.besson.tutorial.item;
 import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.block.ModFluids;
+import com.besson.tutorial.entity.ModBoats;
 import com.besson.tutorial.item.custom.ModArmorItem;
 import com.besson.tutorial.item.custom.PickaxeAxeItem;
 import com.besson.tutorial.sound.ModSoundEvents;
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -70,6 +72,10 @@ public class ModItems {
     public static final Item ICE_ETHER_HANGING_SIGN = registerItem("ice_ether_hanging_sign",
             new HangingSignItem(ModBlocks.ICE_ETHER_HANGING_SIGN,ModBlocks.ICE_ETHER_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
 
+    public static final Item ICE_ETHER_BOAT = TerraformBoatItemHelper.registerBoatItem(
+            ModBoats.ICE_ETHER_BOAT, ModBoats.ICE_ETHER_BOAT_KEY, false);
+    public static final Item ICE_ETHER_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(
+            ModBoats.ICE_ETHER_CHEST_BOAT, ModBoats.ICE_ETHER_BOAT_KEY, true);
 
 
     public static Item registerItems(String id, Item item) {

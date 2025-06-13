@@ -164,5 +164,8 @@ public class ModModelsProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.OIL_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.ICE_ETHER_HANGING_SIGN, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.ICE_ETHER_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ICE_ETHER_CHEST_BOAT, Models.GENERATED);
     }
 }

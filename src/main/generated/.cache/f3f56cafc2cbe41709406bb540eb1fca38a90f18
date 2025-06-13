@@ -1,7 +1,7 @@
-// 1.20.1	2025-06-14T02:28:20.6103889	Tutorial Mod/Tags for minecraft:item
+// 1.20.1	2025-06-14T02:44:25.5658209	Tutorial Mod/Tags for minecraft:item
 a923e9dd5e55dc0bb9081251d4e405127eda5d5b data\minecraft\tags\items\logs_that_burn.json
-c5d8032f35e379911b74dc814554601f8a634a2a data\minecraft\tags\items\planks.json
 44f46be24fec986ef30efcb700edb83260ac887f data\minecraft\tags\items\music_discs.json
+c5d8032f35e379911b74dc814554601f8a634a2a data\minecraft\tags\items\planks.json
 a923e9dd5e55dc0bb9081251d4e405127eda5d5b data\minecraft\tags\items\logs.json
-2642f6d126303394bf4df3e36d9aebe9a619180d data\tutorial-mod\tags\items\sugar_ingredients.json
 574380b3eaa552e3b896566d576b5129738f5381 data\minecraft\tags\items\trimmable_armor.json
+2642f6d126303394bf4df3e36d9aebe9a619180d data\tutorial-mod\tags\items\sugar_ingredients.json
