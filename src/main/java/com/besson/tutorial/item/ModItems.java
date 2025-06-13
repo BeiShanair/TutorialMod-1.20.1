@@ -65,6 +65,13 @@ public class ModItems {
     public static final Item OIL_BUCKET = registerItem("oil_bucket",
             new BucketItem(ModFluids.OIL, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
+    public static final Item ICE_ETHER_SIGN = registerItem("ice_ether_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.ICE_ETHER_SIGN, ModBlocks.ICE_ETHER_WALL_SIGN));
+    public static final Item ICE_ETHER_HANGING_SIGN = registerItem("ice_ether_hanging_sign",
+            new HangingSignItem(ModBlocks.ICE_ETHER_HANGING_SIGN,ModBlocks.ICE_ETHER_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
+
+
+
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), new Identifier(TutorialMod.MOD_ID, id)), item);
     }

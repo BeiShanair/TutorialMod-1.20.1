@@ -78,6 +78,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_ICE_ETHER_WOOD);
                         entries.add(ModBlocks.ICE_ETHER_LEAVES);
                         entries.add(ModBlocks.ICE_ETHER_PLANKS);
+
+                        entries.add(ModItems.ICE_ETHER_HANGING_SIGN);
+                        entries.add(ModBlocks.ICE_ETHER_SIGN);
                     }).build());
 
     public static void registerGroups() {

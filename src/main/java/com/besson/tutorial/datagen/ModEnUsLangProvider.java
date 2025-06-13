@@ -92,6 +92,9 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.STRIPPED_ICE_ETHER_WOOD, "Stripped Ice Ether Wood");
         translationBuilder.add(ModBlocks.ICE_ETHER_PLANKS, "Ice Ether Planks");
         translationBuilder.add(ModBlocks.ICE_ETHER_LEAVES, "Ice Ether Leaves");
+
+        translationBuilder.add(ModItems.ICE_ETHER_SIGN, "Ice Ether Sign");
+        translationBuilder.add(ModItems.ICE_ETHER_HANGING_SIGN, "Ice Ether Hanging Sign");
     }
 
 }

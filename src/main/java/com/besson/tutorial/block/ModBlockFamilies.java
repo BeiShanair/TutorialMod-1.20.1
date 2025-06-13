@@ -23,6 +23,12 @@ public class ModBlockFamilies {
             .trapdoor(ModBlocks.ICE_ETHER_TRAPDOOR)
             .build();
 
+    public static final BlockFamily ICE_ETHER_PLANKS = register(ModBlocks.ICE_ETHER_PLANKS)
+            .sign(ModBlocks.ICE_ETHER_SIGN, ModBlocks.ICE_ETHER_WALL_SIGN)
+            .group("wooden")
+            .unlockCriterionName("has_planks")
+            .build();
+
     public static BlockFamily.Builder register(Block baseBlock) {
         BlockFamily.Builder builder = new BlockFamily.Builder(baseBlock);
         BlockFamily blockFamily = (BlockFamily)BASE_BLOCKS_TO_FAMILIES.put(baseBlock, builder.build());
