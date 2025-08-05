@@ -10,6 +10,7 @@ import com.besson.tutorial.item.ModItems;
 import com.besson.tutorial.sound.ModSoundEvents;
 import com.besson.tutorial.villager.ModTrades;
 import com.besson.tutorial.villager.ModVillagers;
+import com.besson.tutorial.world.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -47,6 +48,8 @@ public class TutorialMod implements ModInitializer {
 		ModFluids.registerModFluids();
 
 		ModBoats.registerBoats();
+
+		ModWorldGeneration.register();
 
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_LOG, ModBlocks.STRIPPED_ICE_ETHER_LOG);
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_WOOD, ModBlocks.STRIPPED_ICE_ETHER_WOOD);
