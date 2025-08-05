@@ -11,6 +11,7 @@ import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
 import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -102,6 +103,11 @@ public class ModBlocks {
 
     public static final Block ICE_ETHER_TREE_SAPLING = register("ice_ether_tree_sapling",
             new SaplingBlock(new IceEtherTreeGenerator(), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+
+    public static final Block SIMPLE_FLOWER = register("simple_flower",
+            new FlowerBlock(StatusEffects.NIGHT_VISION, 4, AbstractBlock.Settings.copy(Blocks.DANDELION)));
+    public static final Block POTTED_SIMPLE_FLOWER = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "potted_simple_flower"),
+            new FlowerPotBlock(SIMPLE_FLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_DANDELION)));
 
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);

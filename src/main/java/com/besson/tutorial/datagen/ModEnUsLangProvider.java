@@ -98,6 +98,8 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.ICE_ETHER_TREE_SAPLING, "Ice Ether Tree Sapling");
 
+        translationBuilder.add(ModBlocks.SIMPLE_FLOWER, "Simple Flower");
+
         translationBuilder.add(ModItems.ICE_ETHER_BOAT, "Ice Ether Boat");
         translationBuilder.add(ModItems.ICE_ETHER_CHEST_BOAT, "Ice Ether Chest Boat");
     }

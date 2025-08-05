@@ -37,5 +37,7 @@ public class TutorialModClient implements ClientModInitializer {
         TerraformBoatClientHelper.registerModelLayers(ModBoats.ICE_ETHER_BOAT, false);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ICE_ETHER_TREE_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SIMPLE_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_SIMPLE_FLOWER, RenderLayer.getCutout());
     }
 }
