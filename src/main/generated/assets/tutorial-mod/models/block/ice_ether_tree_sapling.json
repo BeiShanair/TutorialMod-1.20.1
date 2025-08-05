@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "tutorial-mod:block/ice_ether_tree_sapling"
+  }
+}

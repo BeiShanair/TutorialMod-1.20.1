@@ -96,6 +96,8 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ICE_ETHER_SIGN, "Ice Ether Sign");
         translationBuilder.add(ModItems.ICE_ETHER_HANGING_SIGN, "Ice Ether Hanging Sign");
 
+        translationBuilder.add(ModBlocks.ICE_ETHER_TREE_SAPLING, "Ice Ether Tree Sapling");
+
         translationBuilder.add(ModItems.ICE_ETHER_BOAT, "Ice Ether Boat");
         translationBuilder.add(ModItems.ICE_ETHER_CHEST_BOAT, "Ice Ether Chest Boat");
     }
