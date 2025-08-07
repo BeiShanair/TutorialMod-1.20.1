@@ -4,6 +4,7 @@ import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.block.ModFluids;
 import com.besson.tutorial.entity.ModBoats;
+import com.besson.tutorial.item.custom.FireEther;
 import com.besson.tutorial.item.custom.ModArmorItem;
 import com.besson.tutorial.item.custom.PickaxeAxeItem;
 import com.besson.tutorial.sound.ModSoundEvents;
@@ -28,7 +29,7 @@ public class ModItems {
 
     public static final Item ANTHRACITE = registerItems("anthracite", new Item(new Item.Settings()));
 
-    public static final Item FIRE_ETHER = registerItems("fire_ether", new Item(new Item.Settings()));
+    public static final Item FIRE_ETHER = registerItems("fire_ether", new FireEther(new Item.Settings()));
 
     public static final Item FIRE_ETHER_SWORD = registerItems("fire_ether_sword", new SwordItem(ModToolMaterials.FIRE_ETHER,
             3, -2.0F, new Item.Settings()));

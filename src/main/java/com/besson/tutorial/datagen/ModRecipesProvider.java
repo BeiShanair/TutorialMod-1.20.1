@@ -48,5 +48,11 @@ public class ModRecipesProvider extends FabricRecipeProvider {
 
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING,
                 600, ModItems.RAW_ICE_ETHER, ModItems.ICE_ETHER, 0.35f);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ANTHRACITE, 1)
+                .input(Items.COAL)
+                .input(ModItems.FIRE_ETHER)
+                .criterion("has_item", conditionsFromItem(Items.COAL))
+                .offerTo(exporter, new Identifier(TutorialMod.MOD_ID, "anthracite_from_coal"));
     }
 }
