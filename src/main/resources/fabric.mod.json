@@ -23,7 +23,10 @@
 		],
 		"client": [
             "com.besson.tutorial.TutorialModClient"
-        ]
+        ],
+		"terrablender": [
+			"com.besson.tutorial.world.biome.ModTerraBlenderAPI"
+		]
 	},
 	"mixins": [
 		"tutorial-mod.mixins.json"
