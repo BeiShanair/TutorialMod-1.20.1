@@ -3,6 +3,7 @@ package com.besson.tutorial.block;
 import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.custom.*;
 import com.besson.tutorial.block.custom.ModPillarBlock;
+import com.besson.tutorial.blockentity.ModBlockEntities;
 import com.besson.tutorial.sound.ModSoundEvents;
 import com.besson.tutorial.world.tree.IceEtherTreeGenerator;
 import com.terraformersmc.terraform.sign.block.TerraformHangingSignBlock;
@@ -108,7 +109,15 @@ public class ModBlocks {
             new FlowerBlock(StatusEffects.NIGHT_VISION, 4, AbstractBlock.Settings.copy(Blocks.DANDELION)));
     public static final Block POTTED_SIMPLE_FLOWER = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "potted_simple_flower"),
             new FlowerPotBlock(SIMPLE_FLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_DANDELION)));
+    
+    public static final Block PORTABLE_ORIGINIUM_RIG = registerBlockWithoutItem("portable_originium_rig",
+            new PortableOriginiumRigBlock(AbstractBlock.Settings.create().strength(0.5f).nonOpaque()));
 
+
+    public static Block registerBlockWithoutItem(String id, Block block) {
+        return Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, id), block);
+    }
+    
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);
         return Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, id), block);

@@ -84,6 +84,8 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.ICE_ETHER_TREE_SAPLING);
                         entries.add(ModBlocks.SIMPLE_FLOWER);
+                        
+                        entries.add(ModItems.PORTABLE_ORIGINIUM_RIG);
                     }).build());
 
     public static void registerGroups() {

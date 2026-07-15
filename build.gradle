@@ -23,6 +23,15 @@ repositories {
 	maven { url = 'https://maven.minecraftforge.net/' }
 
 	maven {url = "https://maven.kyrptonaught.dev"}
+
+	maven {
+		name = 'GeckoLib'
+		url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+		content {
+			includeGroupByRegex("software\\.bernie.*")
+			includeGroup("com.eliotlash.mclib")
+		}
+	}
 }
 
 fabricApi {
@@ -47,6 +56,9 @@ dependencies {
 
 	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta65-1.20'
 	include 'net.kyrptonaught:customportalapi:0.0.1-beta65-1.20'
+
+	modImplementation("software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}")
+	implementation("com.eliotlash.mclib:mclib:20")
 }
 
 processResources {

@@ -2,9 +2,11 @@ package com.besson.tutorial;
 
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.block.ModFluids;
+import com.besson.tutorial.blockentity.ModBlockEntities;
 import com.besson.tutorial.entity.ModBoats;
 import com.besson.tutorial.entity.ModEntities;
 import com.besson.tutorial.entity.SeatEntityRenderer;
+import com.besson.tutorial.renderer.PortableOriginiumRigRenderer;
 import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -12,6 +14,7 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.util.Identifier;
 
 public class TutorialModClient implements ClientModInitializer {
@@ -39,5 +42,7 @@ public class TutorialModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ICE_ETHER_TREE_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SIMPLE_FLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_SIMPLE_FLOWER, RenderLayer.getCutout());
+
+        BlockEntityRendererFactories.register(ModBlockEntities.PORTABLE_ORIGINIUM_RIG, PortableOriginiumRigRenderer::new);
     }
 }

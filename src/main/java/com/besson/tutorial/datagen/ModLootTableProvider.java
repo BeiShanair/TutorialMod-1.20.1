@@ -44,6 +44,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ICE_ETHER_DOOR, doorDrops(ModBlocks.ICE_ETHER_DOOR));
         addDrop(ModBlocks.ICE_ETHER_TRAPDOOR);
         addDrop(ModBlocks.ICE_ETHER_WALL);
+        
+        addDrop(ModBlocks.PORTABLE_ORIGINIUM_RIG);
 
         LootCondition.Builder builder =
                 BlockStatePropertyLootCondition.builder(ModBlocks.STRAWBERRY_CROP)

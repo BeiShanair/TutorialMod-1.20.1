@@ -1,6 +1,6 @@
 package com.besson.tutorial;
 
-import com.besson.tutorial.block.ModBlockEntities;
+import com.besson.tutorial.blockentity.ModBlockEntities;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.block.ModFluids;
 import com.besson.tutorial.entity.ModBoats;
@@ -14,12 +14,12 @@ import com.besson.tutorial.world.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.bernie.geckolib.GeckoLib;
 
 public class TutorialMod implements ModInitializer {
 	public static final String MOD_ID = "tutorial-mod";
@@ -52,6 +52,8 @@ public class TutorialMod implements ModInitializer {
 		ModBoats.registerBoats();
 
 		ModWorldGeneration.register();
+
+		GeckoLib.initialize();
 
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_LOG, ModBlocks.STRIPPED_ICE_ETHER_LOG);
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_WOOD, ModBlocks.STRIPPED_ICE_ETHER_WOOD);

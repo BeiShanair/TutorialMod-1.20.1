@@ -102,6 +102,8 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModItems.ICE_ETHER_BOAT, "Ice Ether Boat");
         translationBuilder.add(ModItems.ICE_ETHER_CHEST_BOAT, "Ice Ether Chest Boat");
+        
+        translationBuilder.add(ModItems.PORTABLE_ORIGINIUM_RIG, "Portable Originium Rig");
     }
 
 }

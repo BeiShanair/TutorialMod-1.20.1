@@ -1,6 +1,6 @@
 package com.besson.tutorial.block.custom;
 
-import com.besson.tutorial.block.ModBlockEntities;
+import com.besson.tutorial.blockentity.ModBlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.LootableContainerBlockEntity;

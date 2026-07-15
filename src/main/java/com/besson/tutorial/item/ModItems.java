@@ -7,6 +7,7 @@ import com.besson.tutorial.entity.ModBoats;
 import com.besson.tutorial.item.custom.FireEther;
 import com.besson.tutorial.item.custom.ModArmorItem;
 import com.besson.tutorial.item.custom.PickaxeAxeItem;
+import com.besson.tutorial.item.custom.PortableOriginiumRigItem;
 import com.besson.tutorial.sound.ModSoundEvents;
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -78,6 +79,8 @@ public class ModItems {
     public static final Item ICE_ETHER_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(
             ModBoats.ICE_ETHER_CHEST_BOAT, ModBoats.ICE_ETHER_BOAT_KEY, true);
 
+    public static final Item PORTABLE_ORIGINIUM_RIG = registerItems("portable_originium_rig",
+            new PortableOriginiumRigItem(ModBlocks.PORTABLE_ORIGINIUM_RIG, new Item.Settings()));
 
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), new Identifier(TutorialMod.MOD_ID, id)), item);
