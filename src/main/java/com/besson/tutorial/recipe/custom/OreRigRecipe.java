@@ -57,7 +57,11 @@ public class OreRigRecipe implements Recipe<SimpleInventory> {
     public RecipeType<?> getType() {
         return Type.INSTANCE;
     }
-    
+
+    public Ingredient getInput() {
+        return input;
+    }
+
     public static class Type implements RecipeType<OreRigRecipe> {
         public static final Type INSTANCE = new Type();
         public static final String ID = "ore_rig";

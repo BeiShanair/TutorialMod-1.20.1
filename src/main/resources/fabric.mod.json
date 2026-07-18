@@ -26,6 +26,9 @@
         ],
 		"terrablender": [
 			"com.besson.tutorial.world.biome.ModTerraBlenderAPI"
+		],
+		"rei_client": [
+			"com.besson.tutorial.compat.ModREIClientPlugins"
 		]
 	},
 	"mixins": [
