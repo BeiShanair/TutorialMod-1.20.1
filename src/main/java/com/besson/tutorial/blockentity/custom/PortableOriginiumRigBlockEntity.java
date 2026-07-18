@@ -1,6 +1,7 @@
 package com.besson.tutorial.blockentity.custom;
 
 import com.besson.tutorial.blockentity.ModBlockEntities;
+import com.besson.tutorial.recipe.custom.OreRigRecipe;
 import com.besson.tutorial.screen.custom.PortableOriginiumRigScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.fabricmc.fabric.api.transfer.v1.item.InventoryStorage;
@@ -13,6 +14,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -34,6 +36,8 @@ import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
+
+import java.util.Optional;
 
 public class PortableOriginiumRigBlockEntity extends BlockEntity implements GeoBlockEntity, ExtendedScreenHandlerFactory {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -108,8 +112,11 @@ public class PortableOriginiumRigBlockEntity extends BlockEntity implements GeoB
     }
     
     private void craftItem(World world) {
-        ItemStack out = outputInv.getStack(0);
-        outputInv.setStack(0, new ItemStack(Items.DIAMOND, out.getCount() + 1));
+        getMatchRecipe(world).ifPresent(recipe -> {
+            ItemStack result = recipe.getOutput(world.getRegistryManager());
+            ItemStack out = outputInv.getStack(0);
+            outputInv.setStack(0, new ItemStack(result.getItem(), out.getCount() + result.getCount()));
+        });
     }
     
     private void resetProgress() {
@@ -124,14 +131,26 @@ public class PortableOriginiumRigBlockEntity extends BlockEntity implements GeoB
     }
     
     private boolean hasCorrectRecipe(World world) {
-        BlockState belowState = world.getBlockState(pos.down());
-        return belowState.isOf(Blocks.DIAMOND_ORE) && canOutputAccept(Items.DIAMOND.getDefaultStack());
+        return getMatchRecipe(world)
+                .map(recipe -> canOutputAccept(recipe.getOutput(world.getRegistryManager())))
+                .orElse(false);
     }
     
     private boolean canOutputAccept(ItemStack result) {
         ItemStack out = outputInv.getStack(0);
         return (out.isEmpty() || out.getItem() == result.getItem())
                 && out.getCount() + result.getCount() <= out.getMaxCount();
+    }
+    
+    private Optional<OreRigRecipe> getMatchRecipe(World world) {
+        SimpleInventory inv = new SimpleInventory(1);
+        BlockState belowState = world.getBlockState(pos.down());
+        ItemStack belowStack = belowState.getBlock().asItem().getDefaultStack();
+        inv.setStack(0, belowStack);
+        
+        return world.getRecipeManager()
+                .getFirstMatch(OreRigRecipe.Type.INSTANCE, inv, world)
+                .map(recipe -> (OreRigRecipe) recipe);
     }
     //endregion
 

@@ -3,9 +3,11 @@ package com.besson.tutorial.datagen;
 import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.item.ModItems;
+import com.besson.tutorial.recipe.builder.OreRigRecipeBuilder;
 import com.besson.tutorial.tag.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -54,5 +56,14 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .input(ModItems.FIRE_ETHER)
                 .criterion("has_item", conditionsFromItem(Items.COAL))
                 .offerTo(exporter, new Identifier(TutorialMod.MOD_ID, "anthracite_from_coal"));
+
+        OreRigRecipeBuilder.create(Blocks.DIAMOND_ORE, Items.DIAMOND)
+                .offerTo(exporter, new Identifier(TutorialMod.MOD_ID, "diamond_ore_rig"));
+        OreRigRecipeBuilder.create(Blocks.DEEPSLATE_DIAMOND_ORE, Items.DIAMOND)
+                .offerTo(exporter, new Identifier(TutorialMod.MOD_ID, "deepslate_diamond_ore_rig"));
+        OreRigRecipeBuilder.create(Blocks.IRON_ORE, Items.RAW_IRON)
+                .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "iron_ore_rig"));
+        OreRigRecipeBuilder.create(Blocks.DEEPSLATE_IRON_ORE, Items.RAW_IRON)
+                .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "deepslate_iron_ore_rig"));
     }
 }

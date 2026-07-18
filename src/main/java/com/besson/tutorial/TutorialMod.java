@@ -8,6 +8,7 @@ import com.besson.tutorial.entity.ModBoats;
 import com.besson.tutorial.entity.ModEntities;
 import com.besson.tutorial.item.ModItemGroups;
 import com.besson.tutorial.item.ModItems;
+import com.besson.tutorial.recipe.ModRecipes;
 import com.besson.tutorial.screen.ModScreens;
 import com.besson.tutorial.sound.ModSoundEvents;
 import com.besson.tutorial.villager.ModTrades;
@@ -57,6 +58,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModStorages.register();
 		ModScreens.register();
+
+		ModRecipes.register();
 		
 		GeckoLib.initialize();
 

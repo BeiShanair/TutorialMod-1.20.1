@@ -1,0 +1,10 @@
+{
+  "type": "tutorial-mod:ore_rig",
+  "input": {
+    "item": "minecraft:deepslate_diamond_ore"
+  },
+  "output": {
+    "count": 1,
+    "item": "minecraft:diamond"
+  }
+}
