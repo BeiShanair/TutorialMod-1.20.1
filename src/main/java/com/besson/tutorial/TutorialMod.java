@@ -3,10 +3,12 @@ package com.besson.tutorial;
 import com.besson.tutorial.blockentity.ModBlockEntities;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.block.ModFluids;
+import com.besson.tutorial.blockentity.ModStorages;
 import com.besson.tutorial.entity.ModBoats;
 import com.besson.tutorial.entity.ModEntities;
 import com.besson.tutorial.item.ModItemGroups;
 import com.besson.tutorial.item.ModItems;
+import com.besson.tutorial.screen.ModScreens;
 import com.besson.tutorial.sound.ModSoundEvents;
 import com.besson.tutorial.villager.ModTrades;
 import com.besson.tutorial.villager.ModVillagers;
@@ -53,6 +55,9 @@ public class TutorialMod implements ModInitializer {
 
 		ModWorldGeneration.register();
 
+		ModStorages.register();
+		ModScreens.register();
+		
 		GeckoLib.initialize();
 
 		StrippableBlockRegistry.register(ModBlocks.ICE_ETHER_LOG, ModBlocks.STRIPPED_ICE_ETHER_LOG);
