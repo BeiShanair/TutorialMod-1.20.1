@@ -46,6 +46,8 @@ public class PortableOriginiumRigBlockEntity extends BlockEntity implements GeoB
     public int progress = 0;
     public int maxProgress = 60;
     
+    private boolean enable = true;
+    
     protected final SimpleInventory outputInv = new SimpleInventory(1) {
         @Override
         public void markDirty() {
@@ -70,6 +72,7 @@ public class PortableOriginiumRigBlockEntity extends BlockEntity implements GeoB
                 return switch (index) {
                     case 0 -> PortableOriginiumRigBlockEntity.this.progress;
                     case 1 -> PortableOriginiumRigBlockEntity.this.maxProgress;
+                    case 2 -> PortableOriginiumRigBlockEntity.this.enable ? 1 : 0;
                     default -> 0;
                 };
             }
@@ -81,14 +84,33 @@ public class PortableOriginiumRigBlockEntity extends BlockEntity implements GeoB
 
             @Override
             public int size() {
-                return 2;
+                return 3;
             }
         };
+    }
+
+    public void setEnable(boolean enable) {
+        this.enable = enable;
+        markDirty();
+        if (world != null) {
+            world.updateListeners(pos, world.getBlockState(pos), world.getBlockState(pos), 3);
+        }
+    }
+
+    public boolean getEnable() {
+        return this.enable;
     }
     
     //region Tick
     public static void tick(World world, BlockPos pos, BlockState state, PortableOriginiumRigBlockEntity be) {
         if (world.isClient()) return;
+        
+        if (!be.getEnable()) {
+            be.isWorking = false;
+            world.updateListeners(pos, state, state, 3);
+            be.markDirty();
+            return;
+        }
         
         boolean canProcess = be.hasCorrectRecipe(world);
         
@@ -183,6 +205,7 @@ public class PortableOriginiumRigBlockEntity extends BlockEntity implements GeoB
         nbt.put("output", outputTag);
         nbt.putInt("progress", progress);
         nbt.putBoolean("isWorking", isWorking);
+        nbt.putBoolean("enable", enable);
     }
 
     @Override
@@ -193,6 +216,7 @@ public class PortableOriginiumRigBlockEntity extends BlockEntity implements GeoB
         }
         progress = nbt.getInt("progress");
         isWorking = nbt.getBoolean("isWorking");
+        enable = nbt.getBoolean("enable");
     }
 
     @Override

@@ -106,6 +106,10 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PORTABLE_ORIGINIUM_RIG, "Portable Originium Rig");
         
         translationBuilder.add("blockEntity.porable_originium_rig", "Portable Originium Rig");
+
+        translationBuilder.add("switch_button.tooltip", "Switch Button: %s");
+        translationBuilder.add("switch_button.enable", "Enable");
+        translationBuilder.add("switch_button.disable", "Disable");
     }
 
 }

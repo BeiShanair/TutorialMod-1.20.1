@@ -25,7 +25,7 @@ public class PortableOriginiumRigScreenHandler extends ScreenHandler {
     
     public PortableOriginiumRigScreenHandler(int syncId, PlayerInventory playerInventory, PacketByteBuf buf) {
         this(syncId, playerInventory, Objects.requireNonNull(getBlockEntity(playerInventory, buf)),
-                new ArrayPropertyDelegate(2));
+                new ArrayPropertyDelegate(3));
     }
     
     public PortableOriginiumRigScreenHandler(int syncId, PlayerInventory playerInventory, PortableOriginiumRigBlockEntity entity, PropertyDelegate propertyDelegate) {
@@ -104,5 +104,9 @@ public class PortableOriginiumRigScreenHandler extends ScreenHandler {
         int progressArrowSize = 26;
         
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+    
+    public boolean isEnable() {
+        return propertyDelegate.get(2) == 1;
     }
 }
