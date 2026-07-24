@@ -86,6 +86,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SIMPLE_FLOWER);
                         
                         entries.add(ModItems.PORTABLE_ORIGINIUM_RIG);
+                        
+                        entries.add(ModItems.REFINING_UNIT_ITEM);
                     }).build());
 
     public static void registerGroups() {

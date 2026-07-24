@@ -112,6 +112,11 @@ public class ModBlocks {
     
     public static final Block PORTABLE_ORIGINIUM_RIG = registerBlockWithoutItem("portable_originium_rig",
             new PortableOriginiumRigBlock(AbstractBlock.Settings.create().strength(0.5f).nonOpaque()));
+    
+    public static final Block REFINING_UNIT = registerBlockWithoutItem("refining_unit",
+            new RefiningUnitBlock(AbstractBlock.Settings.create().strength(0.5f).nonOpaque()));
+    public static final Block REFINING_UNIT_SIDE = registerBlockWithoutItem("refining_unit_side",
+            new RefiningUnitSideBlock(AbstractBlock.Settings.create().strength(0.5f).nonOpaque()));
 
 
     public static Block registerBlockWithoutItem(String id, Block block) {

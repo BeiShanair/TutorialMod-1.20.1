@@ -3,7 +3,9 @@ package com.besson.tutorial.datagen;
 import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.item.ModItems;
+import com.besson.tutorial.recipe.ItemCountInput;
 import com.besson.tutorial.recipe.builder.OreRigRecipeBuilder;
+import com.besson.tutorial.recipe.builder.RefiningUnitRecipeBuilder;
 import com.besson.tutorial.tag.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -65,5 +67,10 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "iron_ore_rig"));
         OreRigRecipeBuilder.create(Blocks.DEEPSLATE_IRON_ORE, Items.RAW_IRON)
                 .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "deepslate_iron_ore_rig"));
+
+        RefiningUnitRecipeBuilder.create(new ItemCountInput(ModItems.RAW_ICE_ETHER, 3), ModItems.ICE_ETHER)
+                .offerTo(exporter, new Identifier(TutorialMod.MOD_ID, "ice_ether_refining"));
+        RefiningUnitRecipeBuilder.create(Items.RAW_IRON, Items.IRON_INGOT)
+                .offerTo(exporter, new Identifier(TutorialMod.MOD_ID, "iron_ingot_refining"));
     }
 }

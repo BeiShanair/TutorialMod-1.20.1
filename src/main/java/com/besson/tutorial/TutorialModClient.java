@@ -7,8 +7,10 @@ import com.besson.tutorial.entity.ModBoats;
 import com.besson.tutorial.entity.ModEntities;
 import com.besson.tutorial.entity.SeatEntityRenderer;
 import com.besson.tutorial.renderer.PortableOriginiumRigRenderer;
+import com.besson.tutorial.renderer.RefiningUnitRenderer;
 import com.besson.tutorial.screen.ModScreens;
 import com.besson.tutorial.screen.custom.PortableOriginiumRigScreen;
+import com.besson.tutorial.screen.custom.RefiningUnitScreen;
 import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -47,7 +49,9 @@ public class TutorialModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_SIMPLE_FLOWER, RenderLayer.getCutout());
 
         BlockEntityRendererFactories.register(ModBlockEntities.PORTABLE_ORIGINIUM_RIG, PortableOriginiumRigRenderer::new);
+        BlockEntityRendererFactories.register(ModBlockEntities.REFINING_UNIT, RefiningUnitRenderer::new);
 
         HandledScreens.register(ModScreens.PORTABLE_ORIGINIUM_RIG_SCREEN, PortableOriginiumRigScreen::new);
+        HandledScreens.register(ModScreens.REFINING_UNIT_SCREEN, RefiningUnitScreen::new);
     }
 }

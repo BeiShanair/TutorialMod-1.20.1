@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-20T13:39:20.7686629	Tutorial Mod/Recipes
+// 1.20.1	2026-07-24T13:09:09.2120306	Tutorial Mod/Recipes
 b4fbee60155146f377e940c4bb67e45da63de2b9 data\tutorial-mod\advancements\recipes\misc\ice_ether.json
 cdddb437cccc2942632b76bb6b04f029790ce292 data\tutorial-mod\recipes\ice_ether_from_campfire_cooking.json
 35c7dc21766c7af32b4e815f66a8307763e696f7 data\tutorial-mod\recipes\iron_ore_rig.json
@@ -7,13 +7,15 @@ b04dfe497996198264265781310e6c79fb991c9b data\tutorial-mod\advancements\recipes\
 27abb0d9fe78f022883f6d73f5eeee84cc9028d6 data\tutorial-mod\recipes\ice_ether_from_smelting_ice_ether_ore.json
 b3e667f5e16e859a2c9c843afea0da37405d5ac9 data\tutorial-mod\recipes\diamond_ore_rig.json
 81caa57182c700e2a15a995ca8ad75b8e8a7d19e data\tutorial-mod\advancements\recipes\food\sugar_from_beetroot.json
+330c73f177f4ac16f582fa460a123a4b1c2c3d72 data\tutorial-mod\recipes\iron_ingot_refining.json
 2877e636e220d79ed31dc1642463b66149ffc07c data\tutorial-mod\advancements\recipes\misc\raw_ice_ether.json
 5c28371205a4e9f9d8c7adf2e465c1d6bc13aa1f data\tutorial-mod\recipes\ice_ether_ore.json
-e439f71981b596153c61fcba3523114e8b3f8b20 data\tutorial-mod\recipes\ice_ether_from_blasting_ice_ether_ore.json
 2ee4dccb762fb7b2c0ae803f9adfe718285acc5a data\tutorial-mod\advancements\recipes\building_blocks\raw_ice_ether_block.json
+e439f71981b596153c61fcba3523114e8b3f8b20 data\tutorial-mod\recipes\ice_ether_from_blasting_ice_ether_ore.json
 a4d1733253f8ec768fc31cf339fb5dc176147e89 data\tutorial-mod\advancements\recipes\misc\anthracite_from_coal.json
 94ab6e1dae7a8327af15b4870d258a0a52f2072c data\tutorial-mod\recipes\raw_ice_ether_block.json
 4cc4c076847870f985a1ed29601818cc27a5d492 data\tutorial-mod\advancements\recipes\misc\ice_ether_from_smelting_ice_ether_ore.json
+e76a7e1e4064cb11370498b2d1ad6fa0ee3893d5 data\tutorial-mod\recipes\ice_ether_refining.json
 84a05ca60c59dc27880af382116f38516dd9d9d7 data\tutorial-mod\recipes\anthracite_from_coal.json
 401b17aec81d0d94c02da41b41bb93beec011c3d data\tutorial-mod\advancements\recipes\misc\ice_ether_from_blasting_ice_ether_ore.json
 4247e264f98daa08cd602d37a946da2385f917ef data\tutorial-mod\recipes\deepslate_iron_ore_rig.json

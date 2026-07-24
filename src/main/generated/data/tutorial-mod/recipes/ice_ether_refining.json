@@ -1,0 +1,11 @@
+{
+  "type": "tutorial-mod:refining_unit",
+  "input": {
+    "count": 3,
+    "item": "tutorial-mod:raw_ice_ether"
+  },
+  "output": {
+    "count": 1,
+    "item": "tutorial-mod:ice_ether"
+  }
+}

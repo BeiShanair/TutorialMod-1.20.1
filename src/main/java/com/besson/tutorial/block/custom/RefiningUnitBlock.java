@@ -1,0 +1,122 @@
+package com.besson.tutorial.block.custom;
+
+import com.besson.tutorial.block.ModBlockEntityWithFacing;
+import com.besson.tutorial.block.ModBlocks;
+import com.besson.tutorial.blockentity.ModBlockEntities;
+import com.besson.tutorial.blockentity.custom.RefiningUnitBlockEntity;
+import com.besson.tutorial.blockentity.custom.RefiningUnitSideBlockEntity;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.ItemScatterer;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
+import org.jetbrains.annotations.Nullable;
+
+public class RefiningUnitBlock extends ModBlockEntityWithFacing {
+    public RefiningUnitBlock(Settings settings) {
+        super(settings);
+    }
+
+    @Override
+    public @Nullable BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new RefiningUnitBlockEntity(pos, state);
+    }
+
+    @Override
+    public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+        if (!world.isClient()) {
+            BlockPos[] positions = getPositions(state, pos);
+            
+            for (BlockPos p : positions) {
+                world.setBlockState(p, ModBlocks.REFINING_UNIT_SIDE.getDefaultState().with(FACING, state.get(FACING)));
+                BlockEntity be = world.getBlockEntity(p);
+                if (be instanceof RefiningUnitSideBlockEntity side) {
+                    side.setParentPos(pos);
+                }
+            }
+        }
+    }
+
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        if (!world.isClient()) {
+            BlockPos[] positions = getPositions(state, pos);
+            
+            for (BlockPos p : positions) {
+                if (!world.getBlockState(p).getBlock().getDefaultState().isReplaceable()) {
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+        
+        return false;
+    }
+
+    @Override
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (state.getBlock() != newState.getBlock()) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof RefiningUnitBlockEntity be) {
+                ItemScatterer.spawn(world, pos, be.getItems());
+                world.updateComparators(pos, this);
+            }
+
+            BlockPos[] positions = getPositions(state, pos);
+
+            for (BlockPos p : positions) {
+                if (world.getBlockState(p).getBlock() == ModBlocks.REFINING_UNIT_SIDE) {
+                    world.breakBlock(p, false);
+                }
+            }
+
+            super.onStateReplaced(state, world, pos, newState, moved);
+        }
+    }
+
+    @Override
+    public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return checkType(type, ModBlockEntities.REFINING_UNIT, RefiningUnitBlockEntity::tick);
+    }
+
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (!world.isClient()) {
+            NamedScreenHandlerFactory screenHandlerFactory = (RefiningUnitBlockEntity) world.getBlockEntity(pos);
+            if (screenHandlerFactory != null) {
+                player.openHandledScreen(screenHandlerFactory);
+                return ActionResult.SUCCESS;
+            }
+        }
+        return ActionResult.CONSUME;
+    }
+
+    private BlockPos[] getPositions(BlockState state, BlockPos pos) {
+        Direction facing = state.get(FACING);
+        Direction left = facing.rotateYCounterclockwise();
+        Direction right = facing.rotateYClockwise();
+        Direction back = facing.getOpposite();
+        Direction backLeft = back.rotateYClockwise();
+        Direction backRight = back.rotateYCounterclockwise();
+        
+        return new BlockPos[]{
+                pos.offset(facing), pos.offset(facing).offset(left),
+                pos.offset(right), pos.offset(facing).offset(right),
+                pos.offset(left), pos.offset(back),
+                pos.offset(back).offset(backLeft), 
+                pos.offset(back).offset(backRight)
+        };
+    }
+}

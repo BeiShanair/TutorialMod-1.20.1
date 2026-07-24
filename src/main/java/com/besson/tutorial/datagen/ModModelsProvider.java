@@ -79,6 +79,8 @@ public class ModModelsProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.SIMPLE_FLOWER, ModBlocks.POTTED_SIMPLE_FLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
         
         blockStateModelGenerator.registerSimpleState(ModBlocks.PORTABLE_ORIGINIUM_RIG);
+        
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.REFINING_UNIT);
     }
 
     public static BlockStateSupplier createFenceBlockState(Block fenceBlock, Identifier postModelId, Identifier sideModelId) {

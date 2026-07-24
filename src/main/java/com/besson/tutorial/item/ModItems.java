@@ -4,14 +4,12 @@ import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.block.ModFluids;
 import com.besson.tutorial.entity.ModBoats;
-import com.besson.tutorial.item.custom.FireEther;
-import com.besson.tutorial.item.custom.ModArmorItem;
-import com.besson.tutorial.item.custom.PickaxeAxeItem;
-import com.besson.tutorial.item.custom.PortableOriginiumRigItem;
+import com.besson.tutorial.item.custom.*;
 import com.besson.tutorial.sound.ModSoundEvents;
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -81,6 +79,16 @@ public class ModItems {
 
     public static final Item PORTABLE_ORIGINIUM_RIG = registerItems("portable_originium_rig",
             new PortableOriginiumRigItem(ModBlocks.PORTABLE_ORIGINIUM_RIG, new Item.Settings()));
+    
+    public static final Item REFINING_UNIT_ITEM = registerSameBlockItem("refining_unit",
+            new RefiningUnitItem(ModBlocks.REFINING_UNIT, new Item.Settings()), ModBlocks.REFINING_UNIT_SIDE);
+    private static Item registerSameBlockItem(String name, BlockItem item, Block... blocks) {
+        for (Block block : blocks) {
+            Item.BLOCK_ITEMS.put(block, item);
+        }
+        
+        return Registry.register(Registries.ITEM, new Identifier(TutorialMod.MOD_ID, name), item);
+    }
 
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), new Identifier(TutorialMod.MOD_ID, id)), item);

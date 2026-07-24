@@ -110,6 +110,11 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add("switch_button.tooltip", "Switch Button: %s");
         translationBuilder.add("switch_button.enable", "Enable");
         translationBuilder.add("switch_button.disable", "Disable");
+        
+        translationBuilder.add(ModItems.REFINING_UNIT_ITEM, "Refining Unit");
+        translationBuilder.add("message.no_enough_area", "No Enough Area");
+
+        translationBuilder.add("blockEntity.refining_unit", "Refining Unit");
     }
 
 }

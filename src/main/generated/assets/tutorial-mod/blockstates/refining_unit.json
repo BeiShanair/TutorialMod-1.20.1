@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tutorial-mod:block/refining_unit",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tutorial-mod:block/refining_unit"
+    },
+    "facing=south": {
+      "model": "tutorial-mod:block/refining_unit",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tutorial-mod:block/refining_unit",
+      "y": 270
+    }
+  }
+}
